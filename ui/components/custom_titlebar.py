@@ -247,7 +247,7 @@ class CustomTitleBar(QWidget):
             # 显示托盘通知（使用主窗口的托盘图标）
             if hasattr(self.parent, 'tray_icon') and self.parent.tray_icon:
                 self.parent.tray_icon.showMessage(
-                    "fuck-ace",
+                    "FUCK-ACE",
                     "程序已最小化到系统托盘",
                     QSystemTrayIcon.Information,
                     1000

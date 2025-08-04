@@ -124,7 +124,7 @@ def verify_version_sync():
 
 def parse_arguments():
     """解析命令行参数"""
-    parser = argparse.ArgumentParser(description='fuck-ace Nuitka 打包工具')
+    parser = argparse.ArgumentParser(description='FUCK-ACE Nuitka 打包工具')
     parser.add_argument('-v', '--version', 
                        help='指定新版本号 (格式: x.y.z)',
                        type=str)
@@ -213,7 +213,7 @@ cmd = [
     "--jobs=4",  # 使用多核编译加速
     "--disable-cache=all",  # 禁用缓存
     "--clean-cache=all",  # 清除现有缓存
-    "--output-filename=fuck-ace.exe",  # 指定输出文件名
+    "--output-filename=FUCK-ACE.exe",  # 指定输出文件名
     "--nofollow-import-to=tkinter,PIL.ImageTk",  # 不跟随部分不必要模块
     "--prefer-source-code",  # 优先使用源代码而不是字节码
     "--python-flag=no_site",  # 不导入site
@@ -231,7 +231,7 @@ try:
     subprocess.check_call(cmd)
     
     # 查找生成的可执行文件
-    main_exe = os.path.join(root_dir, "main.dist", "fuck-ace.exe")
+    main_exe = os.path.join(root_dir, "main.dist", "FUCK-ACE.exe")
     
     # 首先判断main_exe是否存在
     if os.path.exists(main_exe):
@@ -249,7 +249,7 @@ except subprocess.CalledProcessError as e:
 
 # 压缩可执行文件目录
 dist_dir = os.path.join(root_dir, "main.dist")
-zip_name = f"fuck-ace-v{current_version}-x64"
+zip_name = f"FUCK-ACE-v{current_version}-x64"
 zip_path = os.path.join(root_dir, zip_name + ".zip")
 if os.path.exists(dist_dir):
     logger.info("正在压缩可执行文件目录...")
@@ -260,13 +260,13 @@ else:
     logger.error("未找到可执行文件目录，无法压缩")
     sys.exit(1)
 
-logger.success(f"fuck-ace v{current_version} Nuitka 打包和压缩完成！")
+logger.success(f"FUCK-ACE v{current_version} Nuitka 打包和压缩完成！")
 
 # 显示使用说明
 def show_usage():
     """显示使用说明"""
     print("\n" + "="*60)
-    print("fuck-ace 打包工具使用说明:")
+    print("FUCK-ACE 打包工具使用说明:")
     print("="*60)
     print("1. 直接运行 (交互式更新版本号):")
     print("   python utils/build_exe.py")

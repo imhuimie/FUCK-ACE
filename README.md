@@ -1,8 +1,8 @@
 <div align="center">
 
-# fuck-ace
+# FUCK-ACE
 
-<img src="https://socialify.git.ci/Cassianvale/fuck-ace/image?font=Jost&forks=1&issues=1&name=1&pattern=Plus&stargazers=1&theme=Dark" alt="fuck-ace" width="640" height="320" />
+<img src="https://socialify.git.ci/Cassianvale/FUCK-ACE/image?font=Jost&forks=1&issues=1&name=1&pattern=Plus&stargazers=1&theme=Dark" alt="FUCK-ACE" width="640" height="320" />
 
 ✨ _游戏反作弊进程管理工具，专为无畏契约、三角洲行动等使用 ACE 反作弊的游戏设计_ ✨
 
@@ -11,12 +11,12 @@
     <img alt="platform" src="https://img.shields.io/badge/Platform-Windows-blue?style=flat-square&logo=windows">
     <img alt="python" src="https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python&logoColor=white">
     <img alt="license" src="https://img.shields.io/badge/License-GPL--3.0-green?style=flat-square&logo=gnu">
-    <img alt="version" src="https://img.shields.io/github/v/release/Cassianvale/fuck-ace?style=flat-square&color=orange&logo=github">
+    <img alt="version" src="https://img.shields.io/github/v/release/Cassianvale/FUCK-ACE?style=flat-square&color=orange&logo=github">
 </div>
 
 <div>
-    <img alt="total downloads" src="https://img.shields.io/github/downloads/Cassianvale/fuck-ace/total?style=for-the-badge&label=%E6%80%BB%E4%B8%8B%E8%BD%BD%E6%AC%A1%E6%95%B0&color=success">
-    <img alt="latest release downloads" src="https://img.shields.io/github/downloads/Cassianvale/fuck-ace/latest/total?style=for-the-badge&label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD&color=blue">
+    <img alt="total downloads" src="https://img.shields.io/github/downloads/Cassianvale/FUCK-ACE/total?style=for-the-badge&label=%E6%80%BB%E4%B8%8B%E8%BD%BD%E6%AC%A1%E6%95%B0&color=success">
+    <img alt="latest release downloads" src="https://img.shields.io/github/downloads/Cassianvale/FUCK-ACE/latest/total?style=for-the-badge&label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD&color=blue">
 </div>
 <br/>
 
@@ -47,8 +47,8 @@
 
 ## 🚀 如何使用
 
-1. [点击下载最新版本.zip压缩包](https://github.com/imhuimie/fuck-ace) 👈
-2. 解压后运行`fuck-ace.exe`
+1. [点击下载最新版本.zip压缩包](https://github.com/imhuimie/FUCK-ACE) 👈
+2. 解压后运行`FUCK-ACE.exe`
 3. 程序将在系统托盘显示图标
 4. 右键点击托盘图标可以：
    - 👁️ 查看程序状态
@@ -61,17 +61,17 @@
 ## 🏠 项目展示
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Cassianvale/fuck-ace/main/assets/image/1.png" width="45%" alt="应用界面预览">
-  <img src="https://raw.githubusercontent.com/Cassianvale/fuck-ace/main/assets/image/2.png" width="45%" alt="进程监控界面预览1">
+  <img src="https://raw.githubusercontent.com/Cassianvale/FUCK-ACE/main/assets/image/1.png" width="45%" alt="应用界面预览">
+  <img src="https://raw.githubusercontent.com/Cassianvale/FUCK-ACE/main/assets/image/2.png" width="45%" alt="进程监控界面预览1">
 </div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Cassianvale/fuck-ace/main/assets/image/3.png" width="45%" alt="内存清理界面预览">
-  <img src="https://raw.githubusercontent.com/Cassianvale/fuck-ace/main/assets/image/4.png" width="45%" alt="设置界面预览">
+  <img src="https://raw.githubusercontent.com/Cassianvale/FUCK-ACE/main/assets/image/3.png" width="45%" alt="内存清理界面预览">
+  <img src="https://raw.githubusercontent.com/Cassianvale/FUCK-ACE/main/assets/image/4.png" width="45%" alt="设置界面预览">
 </div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Cassianvale/fuck-ace/main/assets/image/5.png" width="80%" alt="进程监控界面预览2">
+  <img src="https://raw.githubusercontent.com/Cassianvale/FUCK-ACE/main/assets/image/5.png" width="80%" alt="进程监控界面预览2">
 </div>
 
 ## 😶‍🌫️ 进程模式策略

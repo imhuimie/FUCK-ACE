@@ -3,7 +3,7 @@
 
 """
 模拟VALORANT游戏主进程的测试脚本
-用于测试fuck-ace的进程监控功能
+用于测试FUCK-ACE的进程监控功能
 
 pyinstaller --onefile --name VALORANT-Win64-Shipping mock_valorant.py
 """

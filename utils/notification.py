@@ -128,14 +128,14 @@ def notification_thread(message_queue, icon_path=None, stop_event=None):
             if isinstance(message, str):
                 # 简单字符串消息
                 send_notification(
-                    title="fuck-ace 消息通知",
+                    title="FUCK-ACE 消息通知",
                     message=message,
                     icon_path=icon_path
                 )
             elif isinstance(message, dict):
                 # 字典格式消息，支持更多自定义选项
                 send_notification(
-                    title=message.get('title', "fuck-ace 消息通知"),
+                    title=message.get('title', "FUCK-ACE 消息通知"),
                     message=message.get('message', ''),
                     icon_path=message.get('icon_path', icon_path),
                     buttons=message.get('buttons'),

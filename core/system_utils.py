@@ -34,7 +34,7 @@ def check_single_instance():
     Returns:
         bool: 如果是首次运行返回True，否则返回False
     """
-    mutex = ctypes.windll.kernel32.CreateMutexW(None, False, "Global\\fuck-ace_MUTEX")
+    mutex = ctypes.windll.kernel32.CreateMutexW(None, False, "Global\\FUCK-ACE_MUTEX")
     if ctypes.windll.kernel32.GetLastError() == 183:
         logger.warning("程序已经在运行中，无法启动多个实例！")
         
@@ -51,15 +51,15 @@ def show_already_running_dialog():
     try:
         # 使用Windows API显示消息框
         message = (
-            "fuck-ace 已经在运行中！\n\n"
+            "FUCK-ACE 已经在运行中！\n\n"
             "程序只允许运行一个实例。\n"
-            "请检查系统托盘是否有fuck-ace图标。\n\n"
+            "请检查系统托盘是否有FUCK-ACE图标。\n\n"
             "如果找不到运行中的程序，请尝试：\n"
-            "• 检查任务管理器中是否有fuck-ace进程\n"
+            "• 检查任务管理器中是否有FUCK-ACE进程\n"
             "• 重启电脑后再次运行程序"
         )
         
-        title = "fuck-ace - 程序已运行"
+        title = "FUCK-ACE - 程序已运行"
         
         # 使用Windows API显示消息框
         # MB_OK = 0x00000000, MB_ICONINFORMATION = 0x00000040, MB_TOPMOST = 0x00040000
@@ -75,7 +75,7 @@ def show_already_running_dialog():
     except Exception as e:
         logger.error(f"显示程序重复运行对话框失败: {str(e)}")
         # 如果显示对话框失败，至少在控制台输出信息
-        print("fuck-ace 已经在运行中，无法启动多个实例！")
+        print("FUCK-ACE 已经在运行中，无法启动多个实例！")
 
 
 def get_program_path():
@@ -92,12 +92,12 @@ def get_program_path():
         return os.path.abspath(sys.argv[0])
 
 
-def check_auto_start(app_name="fuck-ace"):
+def check_auto_start(app_name="FUCK-ACE"):
     """
     检查是否设置了开机自启（通过检查startup文件夹中的快捷方式）
     
     Args:
-        app_name (str): 应用名称，默认为fuck-ace
+        app_name (str): 应用名称，默认为FUCK-ACE
     
     Returns:
         bool: 是否设置了开机自启
@@ -142,12 +142,12 @@ def check_auto_start(app_name="fuck-ace"):
         return False
 
 
-def enable_auto_start(app_name="fuck-ace"):
+def enable_auto_start(app_name="FUCK-ACE"):
     """
     设置开机自启（通过在startup文件夹中创建快捷方式）
     
     Args:
-        app_name (str): 应用名称，默认为fuck-ace
+        app_name (str): 应用名称，默认为FUCK-ACE
         
     Returns:
         bool: 操作是否成功
@@ -184,12 +184,12 @@ def enable_auto_start(app_name="fuck-ace"):
         return False
 
 
-def disable_auto_start(app_name="fuck-ace"):
+def disable_auto_start(app_name="FUCK-ACE"):
     """
     取消开机自启（删除startup文件夹中的快捷方式）
     
     Args:
-        app_name (str): 应用名称，默认为fuck-ace
+        app_name (str): 应用名称，默认为FUCK-ACE
         
     Returns:
         bool: 操作是否成功

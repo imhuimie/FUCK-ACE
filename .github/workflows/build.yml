@@ -1,4 +1,4 @@
-name: 构建和发布fuck-ace
+name: 构建和发布FUCK-ACE
 
 permissions:
   contents: write
@@ -124,7 +124,7 @@ jobs:
             --enable-plugin=pyside6 `
             --lto=yes `
             --jobs=$env:NUMBER_OF_PROCESSORS `
-            --output-filename=fuck-ace.exe `
+            --output-filename=FUCK-ACE.exe `
             --nofollow-import-to=tkinter,numpy,scipy,matplotlib,PIL.ImageTk `
             --nofollow-import-to=PySide6.QtWebEngineWidgets `
             --nofollow-import-to=PySide6.Qt3DCore `
@@ -158,12 +158,12 @@ jobs:
             @{ Path = "VERSION"; Name = "版本文件" },
             @{ Path = "compilation-report.xml"; Name = "编译报告" },
             @{ Path = "main.dist"; Name = "构建目录" },
-            @{ Path = "main.dist/fuck-ace.exe"; Name = "可执行文件" }
+            @{ Path = "main.dist/FUCK-ACE.exe"; Name = "可执行文件" }
           )
 
           foreach ($check in $checks) {
             if (Test-Path $check.Path) {
-              if ($check.Path -eq "main.dist/fuck-ace.exe") {
+              if ($check.Path -eq "main.dist/FUCK-ACE.exe") {
                 $fileInfo = Get-Item $check.Path
                 $fileSizeMB = [math]::Round($fileInfo.Length / 1MB, 2)
                 Write-Host "✅ $($check.Name) (大小: ${fileSizeMB} MB)"
@@ -172,7 +172,7 @@ jobs:
               }
             } else {
               Write-Error "❌ $($check.Name) 未找到: $($check.Path)"
-              if ($check.Path -eq "main.dist/fuck-ace.exe") { exit 1 }
+              if ($check.Path -eq "main.dist/FUCK-ACE.exe") { exit 1 }
             }
           }
 
@@ -190,7 +190,7 @@ jobs:
       - name: 压缩可执行文件目录
         run: |
           $dist_dir = "main.dist"
-          $zip_name = "fuck-ace-v${{ github.event.inputs.version }}-x64"
+          $zip_name = "FUCK-ACE-v${{ github.event.inputs.version }}-x64"
           $zip_path = "$zip_name.zip"
 
           if (Test-Path $dist_dir) {
@@ -211,7 +211,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ github.event.inputs.version }}
-          name: fuck-ace v${{ github.event.inputs.version }}
+          name: FUCK-ACE v${{ github.event.inputs.version }}
           body: |
             ### 🚀 更新日志
             ${{ github.event.inputs.release_notes }}
@@ -219,7 +219,7 @@ jobs:
             ### 📥 安装说明
             1. 下载 zip 压缩包文件
             2. 解压到任意目录
-            3. 右键点击 `fuck-ace.exe`，选择"以管理员身份运行"
+            3. 右键点击 `FUCK-ACE.exe`，选择"以管理员身份运行"
 
             ### ⚠️ 系统要求
             - Windows 10/11 x64
@@ -235,4 +235,4 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            fuck-ace-v${{ github.event.inputs.version }}-x64.zip
+            FUCK-ACE-v${{ github.event.inputs.version }}-x64.zip

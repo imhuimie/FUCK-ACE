@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-fuck-ace主程序入口
+FUCK-ACE主程序入口
 """
 
 import os
@@ -48,7 +48,7 @@ def main():
     io_priority_service.start_service()
     
     # 现在日志系统已初始化，可以记录启动信息
-    logger.debug("🟩 fuck-ace 程序已启动！")
+    logger.debug("🟩 FUCK-ACE 程序已启动！")
     
     # 查找图标文件
     icon_path = find_icon_path()
@@ -64,13 +64,13 @@ def main():
     
     # 显示欢迎通知
     buttons = [
-        {'text': '访问项目官网', 'action': 'open_url', 'launch': 'https://github.com/imhuimie/fuck-ace'},
-        {'text': '下载最新版本', 'action': 'open_url', 'launch': 'https://github.com/imhuimie/fuck-ace/releases/latest'}
+        {'text': '访问项目官网', 'action': 'open_url', 'launch': 'https://github.com/imhuimie/FUCK-ACE'},
+        {'text': '下载最新版本', 'action': 'open_url', 'launch': 'https://github.com/imhuimie/FUCK-ACE/releases/latest'}
     ]
     
     send_notification(
-        title="fuck-ace",
-        message=f"🚀 欢迎使用 fuck-ace ！\n🐶 作者: emper0r",
+        title="FUCK-ACE",
+        message=f"🚀 欢迎使用 FUCK-ACE ！\n🐶 作者: emper0r",
         icon_path=icon_path,
         buttons=buttons,
         silent=True
@@ -99,7 +99,7 @@ def main():
         # 等待通知线程结束
         notification_thread_obj.join(timeout=0.5)
         
-        logger.debug("🔴 fuck-ace 程序已终止！")
+        logger.debug("🔴 FUCK-ACE 程序已终止！")
 
 
 if __name__ == "__main__":

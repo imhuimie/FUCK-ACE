@@ -140,7 +140,7 @@ class MainWindow(QWidget):
     
     def setup_ui(self):
         """设置用户界面"""
-        self.setWindowTitle("fuck-ace")
+        self.setWindowTitle("FUCK-ACE")
         self.setMinimumSize(600, 780)
         
         # 设置无边框窗口
@@ -209,7 +209,6 @@ class MainWindow(QWidget):
             "🎯 监控目标：ACE-Tray.exe（反作弊安装弹窗进程）\n"
             "⚡ 功能说明：自动检测并终止ACE反作弊安装弹窗，防止强制安装\n"
             "💡 提示: 进程优化设置在进程重启后会恢复默认值，建议将常用进程添加到自动优化列表中实现持续优化。\n"
-            "🪜 VPN出海加速网站：ktcat.su\n"
         )
         self.ace_info_label.setWordWrap(True)
         StyleHelper.set_label_type(self.ace_info_label, "info")
@@ -731,9 +730,6 @@ class MainWindow(QWidget):
         tray_menu.addSeparator()
 
         # 打开官网动作
-        open_website_action = QAction("梯子加速官网", self)
-        open_website_action.triggered.connect(lambda: webbrowser.open("https://ktcat.su"))
-        tray_menu.addAction(open_website_action)
 
         tray_menu.addSeparator()
 
@@ -1140,7 +1136,7 @@ class MainWindow(QWidget):
         if self.tray_icon:
             mem_info = self.memory_cleaner.get_memory_info() if self.memory_cleaner.running else None
             mem_usage = f" - 内存: {mem_info['percent']:.1f}%" if mem_info else ""
-            self.tray_icon.setToolTip(f"fuck-ace - {'运行中' if self.monitor.running else '已停止'}{mem_usage}")
+            self.tray_icon.setToolTip(f"FUCK-ACE - {'运行中' if self.monitor.running else '已停止'}{mem_usage}")
     
     def update_memory_status(self):
         """更新内存状态显示"""
@@ -1409,7 +1405,7 @@ class MainWindow(QWidget):
             
             msg_box.exec()
             if msg_box.clickedButton() == get_version_btn:
-                github_url = extra_data.get('github_url', 'https://github.com/imhuimie/fuck-ace/releases')
+                github_url = extra_data.get('github_url', 'https://github.com/imhuimie/FUCK-ACE/releases')
                 webbrowser.open(github_url)
                 
         elif msg_type == "update":
@@ -1478,10 +1474,10 @@ class MainWindow(QWidget):
                 import json
                 try:
                     update_info = json.loads(update_info_str)
-                    release_url = update_info.get('url', 'https://github.com/cassianvale/fuck-ace/releases/latest')
+                    release_url = update_info.get('url', 'https://github.com/cassianvale/FUCK-ACE/releases/latest')
                     webbrowser.open(release_url)
                 except:
-                    webbrowser.open("https://github.com/cassianvale/fuck-ace/releases/latest")
+                    webbrowser.open("https://github.com/cassianvale/FUCK-ACE/releases/latest")
                     
         else:
             QMessageBox.information(self, title, message)
@@ -1491,12 +1487,12 @@ class MainWindow(QWidget):
         """显示关于对话框"""
         # 创建自定义消息框，添加访问官网的选项
         msg_box = QMessageBox(self)
-        msg_box.setWindowTitle("关于 fuck-ace")
+        msg_box.setWindowTitle("关于 FUCK-ACE")
         msg_box.setText(
-            "fuck-ace\n\n"
+            "FUCK-ACE\n\n"
             "作者: CassianVale\n\n"
             "作者: 煎饺\n\n"
-            "fuck-ace是一款游戏优化工具，用于监控并优化游戏进程\n\n"
+            "FUCK-ACE是一款游戏优化工具，用于监控并优化游戏进程\n\n"
             "💡 如果这个工具对您有帮助，欢迎访问官网：Ktcat.su\n"
             "   • 分享给更多需要的朋友\n\n"
             "您的支持是项目持续改进的动力！\n\n"
@@ -1518,7 +1514,7 @@ class MainWindow(QWidget):
         # 如果点击了访问官网按钮
         if clicked_button == visit_btn:
             import webbrowser
-            webbrowser.open("https://ktcat.su")
+            webbrowser.open("https://github.com/imhuimie/FUCK-ACE")
             logger.debug("用户通过关于对话框访问了项目官网")
     
     @Slot()
@@ -1572,7 +1568,7 @@ class MainWindow(QWidget):
         """在托盘菜单显示状态通知"""
         status = get_status_info(self.monitor)
         send_notification(
-            title="fuck-ace 状态",
+            title="FUCK-ACE 状态",
             message=status,
             icon_path=self.icon_path
         )
@@ -1616,7 +1612,7 @@ class MainWindow(QWidget):
             # 如果托盘图标可见且通知开启，显示最小化提示
             if hasattr(self, 'tray_icon') and self.tray_icon.isVisible() and self.monitor.config_manager.show_notifications:
                 self.tray_icon.showMessage(
-                    "fuck-ace",
+                    "FUCK-ACE",
                     "程序已最小化到系统托盘，继续在后台运行",
                     QSystemTrayIcon.MessageIcon.Information,
                     2000
@@ -1959,7 +1955,7 @@ class MainWindow(QWidget):
         if success_count > 0:
             if self.monitor.config_manager.show_notifications:
                 send_notification(
-                    title="fuck-ace 服务删除",
+                    title="FUCK-ACE 服务删除",
                     message=f"已成功删除 {success_count} 个ACE服务",
                     icon_path=self.icon_path
                 )
@@ -2232,7 +2228,7 @@ class MainWindow(QWidget):
         if success_count > 0:
             if self.monitor.config_manager.show_notifications:
                 send_notification(
-                    title="fuck-ace 服务停止",
+                    title="FUCK-ACE 服务停止",
                     message=f"已成功停止 {success_count} 个ACE服务",
                     icon_path=self.icon_path
                 )
@@ -2270,7 +2266,7 @@ class MainWindow(QWidget):
             # 发送通知
             if self.monitor.config_manager.show_notifications:
                 send_notification(
-                    title="fuck-ace",
+                    title="FUCK-ACE",
                     message="ACE反作弊程序启动命令已执行",
                     icon_path=self.icon_path
                 )
@@ -2315,7 +2311,7 @@ class MainWindow(QWidget):
             # 发送通知
             if self.monitor.config_manager.show_notifications:
                 send_notification(
-                    title="fuck-ace",
+                    title="FUCK-ACE",
                     message="ACE反作弊程序卸载命令已执行。",
                     icon_path=self.icon_path
                 )

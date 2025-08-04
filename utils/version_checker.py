@@ -25,8 +25,8 @@ class VersionChecker(QObject):
 
     def __init__(self):
         super().__init__()
-        self.github_api_url = "https://api.github.com/repos/imhuimie/fuck-ace/releases/latest"
-        self.github_releases_url = "https://github.com/imhuimie/fuck-ace/releases"
+        self.github_api_url = "https://api.github.com/repos/imhuimie/FUCK-ACE/releases/latest"
+        self.github_releases_url = "https://github.com/imhuimie/FUCK-ACE/releases"
         self.timeout = 10
 
     def get_current_version(self):
@@ -59,7 +59,7 @@ class VersionChecker(QObject):
             current_ver = self.get_current_version()
 
             headers = {
-                'User-Agent': f'fuck-ace/{current_ver}',
+                'User-Agent': f'FUCK-ACE/{current_ver}',
                 'Accept': 'application/vnd.github.v3+json'
             }
 
@@ -190,7 +190,7 @@ def create_update_message(has_update, current_ver, latest_ver, update_info_str, 
             f"• 直接访问GitHub项目页面获取最新版本\n\n"
             f"是否打开GitHub项目页面？",
             "error",
-            {"github_url": "https://github.com/imhuimie/fuck-ace/releases"}
+            {"github_url": "https://github.com/imhuimie/FUCK-ACE/releases"}
         )
 
     if has_update:
@@ -198,7 +198,7 @@ def create_update_message(has_update, current_ver, latest_ver, update_info_str, 
             update_info = json.loads(update_info_str)
             release_name = update_info.get('name', f'v{latest_ver}')
             release_body = update_info.get('body', '').strip()
-            release_url = update_info.get('url', 'https://github.com/imhuimie/fuck-ace/releases')
+            release_url = update_info.get('url', 'https://github.com/imhuimie/FUCK-ACE/releases')
             direct_download_url = update_info.get('download_url')
 
             if len(release_body) > 300:
@@ -233,7 +233,7 @@ def create_update_message(has_update, current_ver, latest_ver, update_info_str, 
                 f"发现新版本！\n\n当前版本: v{current_ver}\n最新版本: v{latest_ver}\n\n是否前往下载页面？",
                 "update",
                 {
-                    "download_url": "https://github.com/imhuimie/fuck-ace/releases",
+                    "download_url": "https://github.com/imhuimie/FUCK-ACE/releases",
                     "is_direct_download": False
                 }
             )
