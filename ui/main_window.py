@@ -1474,10 +1474,10 @@ class MainWindow(QWidget):
                 import json
                 try:
                     update_info = json.loads(update_info_str)
-                    release_url = update_info.get('url', 'https://github.com/cassianvale/FUCK-ACE/releases/latest')
+                    release_url = update_info.get('url', 'https://github.com/imhuimie/FUCK-ACE/releases/latest')
                     webbrowser.open(release_url)
                 except:
-                    webbrowser.open("https://github.com/cassianvale/FUCK-ACE/releases/latest")
+                    webbrowser.open("https://github.com/imhuimie/FUCK-ACE/releases/latest")
                     
         else:
             QMessageBox.information(self, title, message)
@@ -1490,10 +1490,9 @@ class MainWindow(QWidget):
         msg_box.setWindowTitle("关于 FUCK-ACE")
         msg_box.setText(
             "FUCK-ACE\n\n"
-            "作者: CassianVale\n\n"
-            "作者: 煎饺\n\n"
+            "作者: emper0r\n\n"
             "FUCK-ACE是一款游戏优化工具，用于监控并优化游戏进程\n\n"
-            "💡 如果这个工具对您有帮助，欢迎访问官网：Ktcat.su\n"
+            "💡 如果这个工具对您有帮助\n"
             "   • 分享给更多需要的朋友\n\n"
             "您的支持是项目持续改进的动力！\n\n"
             "是否访问项目官网？"
